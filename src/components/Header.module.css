@@ -1,0 +1,6 @@
+.root {
+	margin: 1rem;
+	padding: 1rem;
+	background-color: var(--color-bg1);
+	border-radius: var(--border-radius);
+}
