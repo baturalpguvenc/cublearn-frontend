@@ -3,4 +3,12 @@
 	padding: 1rem;
 	background-color: var(--color-bg1);
 	border-radius: var(--border-radius);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.brand {
+	font-size: 2rem;
+	font-weight: 300;
 }

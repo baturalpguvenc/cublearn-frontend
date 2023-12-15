@@ -1,0 +1,6 @@
+.root {
+	background-color: var(--color-bg1);
+	border-radius: var(--border-radius);
+	padding: 1rem;
+	cursor: pointer;
+}
