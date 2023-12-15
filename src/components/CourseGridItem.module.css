@@ -1,6 +1,25 @@
 .root {
 	background-color: var(--color-bg1);
 	border-radius: var(--border-radius);
-	padding: 1rem;
+	overflow: hidden;
 	cursor: pointer;
+}
+
+.image {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+}
+
+.body {
+	padding: 1rem;
+	padding-top: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.name {
+	font-size: 1.2rem;
+	font-weight: 500;
 }
