@@ -12,3 +12,9 @@
 	font-size: 2rem;
 	font-weight: 300;
 }
+
+.nav {
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
+}

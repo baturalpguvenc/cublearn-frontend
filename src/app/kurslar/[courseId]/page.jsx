@@ -18,7 +18,7 @@ export default function CourseDetailPage({ params }) {
 					<div>
 						<h1>{course.name}</h1>
 						<div>{course.instructor.name}</div>
-						<button className={cn(styles.buyButton, "btn")}>
+						<button className={cn(styles.buyButton, "btn btn-primary")}>
 							Satın Al: {formatPrice(course.price)}
 						</button>
 					</div>

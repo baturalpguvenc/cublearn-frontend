@@ -26,13 +26,10 @@ a {
 }
 
 .btn {
-	color: white;
-	background-color: var(--color-accent);
-	border: none;
 	border-radius: var(--border-radius);
 	padding: 0.75rem 1rem;
 	font-size: 1rem;
-	font-weight: 700;
+	font-weight: 600;
 	cursor: pointer;
 	transition: transform 0.125s;
 }
@@ -41,6 +38,33 @@ a {
 }
 .btn:active {
 	transform: scale(0.95);
+}
+.btn-primary {
+	color: white;
+	background-color: var(--color-accent);
+	border: none;
+}
+.btn-flat {
+	color: white;
+	background-color: transparent;
+	border: none;
+}
+
+.input {
+	padding: 0.75rem;
+	border: none;
+	border-radius: var(--border-radius);
+}
+
+.input-group {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 300;
 }
 
 .fg-accent {
