@@ -18,3 +18,23 @@
 	align-items: center;
 	gap: 2.5rem;
 }
+
+.search {
+	display: flex;
+	align-items: center;
+  
+	/* input yerine .search-input class'ını kullan */
+	.search-input {
+	  padding: 8px;
+	  margin-right: 8px;
+	}
+  
+	/* button yerine .search-button class'ını kullan */
+	.search-button {
+	  padding: 8px 16px;
+	  background-color: #ff0000;
+	  color: #fff;
+	  border: none;
+	  cursor: pointer;
+	}
+  }

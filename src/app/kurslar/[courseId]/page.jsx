@@ -21,6 +21,9 @@ export default function CourseDetailPage({ params }) {
 						<button className={cn(styles.buyButton, "btn btn-primary")}>
 							Satın Al: {formatPrice(course.price)}
 						</button>
+						<button className={cn(styles.buyButton, "btn btn-primary")}>
+							Eğitime Başla
+						</button>
 					</div>
 				</div>
 

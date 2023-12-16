@@ -1,0 +1,33 @@
+@media screen and (max-width: 900px) {
+	.root {
+		text-align: center;
+	}
+}
+
+.columns {
+	display: flex;
+	gap: 1.5rem;
+	align-items: flex-start;
+}
+@media screen and (max-width: 900px) {
+	.columns {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.image {
+	width: 50%;
+	max-width: 1280px;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border-radius: var(--border-radius);
+}
+
+.buyButton {
+	margin-top: 1.5rem;
+}
+
+.description {
+	margin-top: 1.5rem;
+}
