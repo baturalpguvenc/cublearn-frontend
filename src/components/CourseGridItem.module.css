@@ -2,7 +2,6 @@
 	background-color: var(--color-bg1);
 	border-radius: var(--border-radius);
 	overflow: hidden;
-	cursor: pointer;
 }
 
 .image {
