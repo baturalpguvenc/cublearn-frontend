@@ -8,6 +8,7 @@ export const CATEGORIES = [
 export const COURSES = [
 	{
 		id: "1",
+		slug: "ethereum-ve-solidity",
 		name: "Ethereum ve Solidity",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae veritatis deserunt quidem hic ea repellendus fugiat ducimus tenetur. Fugit cumque quo saepe possimus rem qui odit vitae dignissimos reprehenderit!",
@@ -20,6 +21,7 @@ export const COURSES = [
 	},
 	{
 		id: "2",
+		slug: "akilli-sozlesme-guvenligi",
 		name: "Akıllı Sözleşme Güvenliği",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae veritatis deserunt quidem hic ea repellendus fugiat ducimus tenetur. Fugit cumque quo saepe possimus rem qui odit vitae dignissimos reprehenderit!",
@@ -32,6 +34,7 @@ export const COURSES = [
 	},
 	{
 		id: "3",
+		slug: "next-js-ile-onyuz-uygulamalari-gelistirme",
 		name: "Next.js ile Önyüz Uygulamaları Geliştirme",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae veritatis deserunt quidem hic ea repellendus fugiat ducimus tenetur. Fugit cumque quo saepe possimus rem qui odit vitae dignissimos reprehenderit!",
@@ -44,10 +47,11 @@ export const COURSES = [
 	},
 	{
 		id: "4",
+		slug: "pardus-a-giris",
 		name: "Pardus'a Giriş",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae veritatis deserunt quidem hic ea repellendus fugiat ducimus tenetur. Fugit cumque quo saepe possimus rem qui odit vitae dignissimos reprehenderit!",
-		price: "0.05",
+		price: "150",
 		imageUrl: "/course-images/pardus.jpg",
 		instructor: {
 			name: "Berk Çiçek",
@@ -56,9 +60,11 @@ export const COURSES = [
 	},
 	{
 		id: "5",
+		slug: "yapay-zekaya-giris",
 		name: "Yapay Zekaya Giriş",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae veritatis deserunt quidem hic ea repellendus fugiat ducimus tenetur. Fugit cumque quo saepe possimus rem qui odit vitae dignissimos reprehenderit!",
+		price: "250",
 		imageUrl: "/course-images/ai.png",
 		instructor: {
 			name: "Muhammed Akıncı",
@@ -67,6 +73,7 @@ export const COURSES = [
 	},
 	{
 		id: "6",
+		slug: "react-js-temelleri",
 		name: "React.js Temelleri",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae veritatis deserunt quidem hic ea repellendus fugiat ducimus tenetur. Fugit cumque quo saepe possimus rem qui odit vitae dignissimos reprehenderit!",
@@ -79,6 +86,7 @@ export const COURSES = [
 	},
 	{
 		id: "7",
+		slug: "avalanche-ile-merkeziyetsiz-uygulamalar",
 		name: "Avalanche ile Merkeziyetsiz Uygulamalar",
 		description:
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae veritatis deserunt quidem hic ea repellendus fugiat ducimus tenetur. Fugit cumque quo saepe possimus rem qui odit vitae dignissimos reprehenderit!",

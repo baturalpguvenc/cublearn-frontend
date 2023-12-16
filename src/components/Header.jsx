@@ -1,3 +1,4 @@
+import { cn } from "@/utils";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Link from "next/link";
 import styles from "./Header.module.css";
@@ -5,7 +6,7 @@ import styles from "./Header.module.css";
 export default function Header() {
 	return (
 		<header className={styles.root}>
-			<Link className={styles.brand} href="/">
+			<Link className={cn(styles.brand, "pressable")} href="/">
 				<span>Cub</span>
 				<span className="fg-accent">Learn</span>
 			</Link>

@@ -1,11 +1,11 @@
-import Link from 'next/link';
 import Container from "@/components/Container";
 import { COURSES } from "@/mockData";
 import { cn, formatPrice } from "@/utils";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function CourseDetailPage({ params }) {
-	const course = COURSES.find((c) => c.id === params.courseId);
+	const course = COURSES.find((c) => c.slug === params.courseSlug);
 
 	return (
 		<main className={styles.root}>
@@ -19,14 +19,18 @@ export default function CourseDetailPage({ params }) {
 					<div>
 						<h1>{course.name}</h1>
 						<div>{course.instructor.name}</div>
-						<button className={cn(styles.buyButton, "btn btn-primary")}>
-							Satın Al: {formatPrice(course.price)}
-						</button>
-						<br/>
-						<br/>
-						<Link href={`/kurslar/${params.courseId}/ogren`} className={cn(styles.startButton, "btn btn-primary")}>
-      						Eğitime Başla
-						</Link>
+						{true ? (
+							<Link
+								href={`/kurslar/${params.courseSlug}/ogren`}
+								className={cn(styles.button, "btn btn-primary")}
+							>
+								Eğitime Başla
+							</Link>
+						) : (
+							<button className={cn(styles.button, "btn btn-primary")}>
+								Satın Al: {formatPrice(course.price)}
+							</button>
+						)}
 					</div>
 				</div>
 

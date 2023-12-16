@@ -5,7 +5,7 @@ import styles from "./CourseGridItem.module.css";
 export default function CourseGridItem({ course }) {
 	return (
 		<Link
-			href={`/kurslar/${course.id}`}
+			href={`/kurslar/${course.slug}`}
 			className={cn(styles.root, "pressable")}
 		>
 			<img className={styles.image} src={course.imageUrl} alt="Kurs resmi" />
