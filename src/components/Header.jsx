@@ -1,4 +1,3 @@
-// Header.js
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Link from "next/link";
 import styles from "./Header.module.css";

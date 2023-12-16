@@ -10,14 +10,5 @@
 
 .categories {
 	display: flex;
-	gap: 8px;
-	margin-bottom: 16px;
-  }
-  
-  .categoryButton {
-	padding: 8px;
-	background-color: #f0f0f0;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	cursor: pointer;
-  }
+	gap: 0.5rem;
+}
