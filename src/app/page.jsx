@@ -24,6 +24,7 @@ export default function HomePage() {
           <CourseGrid courses={COURSES} />
         </section>
       </Container>
+      
     </main>
   );
 }

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Container from "@/components/Container";
 import { COURSES } from "@/mockData";
 import { cn, formatPrice } from "@/utils";
@@ -21,9 +22,11 @@ export default function CourseDetailPage({ params }) {
 						<button className={cn(styles.buyButton, "btn btn-primary")}>
 							Satın Al: {formatPrice(course.price)}
 						</button>
-						<button className={cn(styles.buyButton, "btn btn-primary")}>
-							Eğitime Başla
-						</button>
+						<br/>
+						<br/>
+						<Link href={`/kurslar/${params.courseId}/ogren`} className={cn(styles.startButton, "btn btn-primary")}>
+      						Eğitime Başla
+						</Link>
 					</div>
 				</div>
 
