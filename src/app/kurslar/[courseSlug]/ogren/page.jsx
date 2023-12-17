@@ -1,5 +1,6 @@
 "use client";
 
+import { CubLearn } from "@/contracts";
 import { COURSES } from "@/mockData";
 import { useState } from "react";
 import { useContractWrite, usePrepareContractWrite } from "wagmi";
