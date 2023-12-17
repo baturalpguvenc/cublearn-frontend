@@ -1,5 +1,5 @@
 "use client";
-import { DTLToken } from "@/contracts";
+
 import { COURSES } from "@/mockData";
 import { useState } from "react";
 import { useContractWrite, usePrepareContractWrite } from "wagmi";
@@ -20,8 +20,8 @@ const LearnPage = ({ params }) => {
 	const course = COURSES.find((c) => c.slug === params.courseSlug);
 
 	const { config: finishCourseConfig } = usePrepareContractWrite({
-		address: DTLToken.address,
-		abi: DTLToken.abi,
+		address: CubLearn.address,
+		abi: CubLearn.abi,
 		functionName: "finishCourse",
 		args: [
 			course.id,
