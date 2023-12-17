@@ -1,5 +1,8 @@
 "use client";
+import { DTLToken } from "@/contracts";
+import { COURSES } from "@/mockData";
 import { useState } from "react";
+import { useContractWrite, usePrepareContractWrite } from "wagmi";
 import styles from "./page.module.css";
 
 const Step = ({ label }) => {
@@ -13,7 +16,22 @@ const Step = ({ label }) => {
 	);
 };
 
-const Home = () => {
+const LearnPage = ({ params }) => {
+	const course = COURSES.find((c) => c.slug === params.courseSlug);
+
+	const { config: finishCourseConfig } = usePrepareContractWrite({
+		address: DTLToken.address,
+		abi: DTLToken.abi,
+		functionName: "finishCourse",
+		args: [
+			course.id,
+			"Osman Nuri Yıldız",
+			"Akıllı Kontrat Güvenliği",
+			"Atıl Samancıoğlu",
+		],
+	});
+	const finishCourse = useContractWrite(finishCourseConfig);
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.videoContainer}>
@@ -47,6 +65,7 @@ const Home = () => {
 						marginRight: "auto",
 						display: "block",
 					}}
+					onClick={() => finishCourse.write?.()}
 				>
 					Sertifikayı Al
 				</button>
@@ -55,4 +74,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default LearnPage;

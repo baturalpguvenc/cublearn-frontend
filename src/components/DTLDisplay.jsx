@@ -38,6 +38,11 @@ export default function DTLDisplay() {
 	const approveMax = useContractWrite(approveMaxConfig);
 
 	useEffect(() => {
+		const interval = setInterval(() => getMyBalance.refetch(), 2000);
+		return () => clearInterval(interval);
+	}, []);
+
+	useEffect(() => {
 		if (address) {
 			getMyBalance.refetch();
 		}
