@@ -1,11 +1,32 @@
+"use client";
+
 import Container from "@/components/Container";
+import { CubLearn } from "@/contracts";
 import { COURSES } from "@/mockData";
 import { cn, formatPrice } from "@/utils";
 import Link from "next/link";
+import { useContractRead, useContractWrite, useWalletClient } from "wagmi";
 import styles from "./page.module.css";
 
 export default function CourseDetailPage({ params }) {
+	const { data: walletClient } = useWalletClient();
+
 	const course = COURSES.find((c) => c.slug === params.courseSlug);
+
+	const amIEnrolledInCourse = useContractRead({
+		address: CubLearn.address,
+		abi: CubLearn.abi,
+		functionName: "amIEnrolledInCourse",
+		args: [course.id],
+		account: walletClient?.account,
+	});
+
+	const enroll = useContractWrite({
+		address: CubLearn.address,
+		abi: CubLearn.abi,
+		functionName: "enroll",
+		args: [course.id],
+	});
 
 	return (
 		<main className={styles.root}>
@@ -19,7 +40,7 @@ export default function CourseDetailPage({ params }) {
 					<div>
 						<h1>{course.name}</h1>
 						<div>{course.instructor.name}</div>
-						{true ? (
+						{amIEnrolledInCourse.data ? (
 							<Link
 								href={`/kurslar/${params.courseSlug}/ogren`}
 								className={cn(styles.button, "btn btn-primary")}
@@ -27,7 +48,11 @@ export default function CourseDetailPage({ params }) {
 								Eğitime Başla
 							</Link>
 						) : (
-							<button className={cn(styles.button, "btn btn-primary")}>
+							<button
+								className={cn(styles.button, "btn btn-primary")}
+								disabled={!enroll.write}
+								onClick={() => enroll.write?.()}
+							>
 								Satın Al: {formatPrice(course.price)}
 							</button>
 						)}

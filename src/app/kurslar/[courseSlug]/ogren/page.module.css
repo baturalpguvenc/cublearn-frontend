@@ -4,7 +4,8 @@
 
 .sidebar {
 	width: 500px;
-	padding: 50px;
+	padding: 20px;
+	padding-top: 0;
 	border-left: 2px solid #ccc;
 }
 
@@ -15,16 +16,18 @@
 
 .courseContent {
 	flex: 1;
-	padding: 10px;
 }
 
 .step {
 	cursor: pointer;
 	margin-bottom: 10px;
+	padding: 1rem;
+	background-color: var(--color-bg1);
+	border-radius: var(--border-radius);
 }
 
 .video {
-	width: 120%;
+	width: 100%;
 	max-width: 1000px;
 	aspect-ratio: 16 / 9;
 	display: block;

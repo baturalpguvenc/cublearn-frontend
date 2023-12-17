@@ -33,6 +33,7 @@ export default function WrapperComponent({ children }) {
 					accentColor: "var(--color-accent)",
 				})}
 				locale="tr-TR"
+				coolMode
 			>
 				<WalletManager />
 				{children}

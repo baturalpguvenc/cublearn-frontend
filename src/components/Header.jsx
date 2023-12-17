@@ -1,6 +1,7 @@
 import { cn } from "@/utils";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Link from "next/link";
+import DTLDisplay from "./DTLDisplay";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -16,7 +17,9 @@ export default function Header() {
 					Hesabım
 				</Link>
 
-				<ConnectButton />
+				<DTLDisplay />
+
+				<ConnectButton showBalance={false} />
 			</div>
 		</header>
 	);
